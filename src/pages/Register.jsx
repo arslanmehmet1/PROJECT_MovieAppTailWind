@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import GoogleIcon from "../assets/icons/GoogleIcon";
+import { createUser, signUpWithGoogle } from "../auth/firebase";
 
 const Register = () => {
   //* ayrı stateler
@@ -7,6 +9,7 @@ const Register = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
   //* birleştirilmiş state
   // const [info, setInfo] = useState({
   //   firstName: "",
@@ -17,7 +20,13 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const displayName = `${firstName} ${lastName}`;
+    createUser(email, password, navigate, displayName);
     console.log(firstName, lastName);
+  };
+
+  const handleGoogleProvider = () => {
+    signUpWithGoogle(navigate);
   };
 
   // const hadleChange = (e) =>
@@ -99,6 +108,7 @@ const Register = () => {
             <button
               className="flex justify-between border-none outline-none bg-[#ff4b45] custom-input w-[300px] mt-[15px] rounded-[4px] font-[600] cursor-pointer"
               type="button"
+              onClick={handleGoogleProvider}
             >
               Continue with Google
               <GoogleIcon color="currentColor" />
