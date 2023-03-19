@@ -1,6 +1,6 @@
 https://project-movie-app-tail-wind.vercel.app/
 
-https://user-images.githubusercontent.com/108485739/226175032-df9ff877-2848-4876-9298-92980881fd19.mp4
+https://user-images.githubusercontent.com/108485739/226175830-98d36115-ec9c-4e0e-9ea1-3e84329256e5.mp4
 
 https://user-images.githubusercontent.com/108485739/226175179-71ced78c-6a6a-4f40-98d8-6ec4602d7449.mp4
 <p>Clarusway<img align="right"
